@@ -12,16 +12,16 @@ const Dashboard: React.FC = () => {
           <div className="flex justify-between items-center h-16">
             <div>
               <h1 className="text-2xl font-bold text-gray-900">Dashboard</h1>
-              <p className="text-sm text-gray-500">Bem-vindo ao Teste Maru</p>
+              <p className="text-sm text-gray-500">Welcome to Teste Maru</p>
             </div>
             
             <div className="flex items-center space-x-4">
-              <span className="text-gray-700">Olá, {user?.name}</span>
+              <span className="text-gray-700">Hello, {user?.name}</span>
               <button
                 onClick={logout}
                 className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
               >
-                Sair
+                Logout
               </button>
             </div>
           </div>
@@ -43,7 +43,7 @@ const Dashboard: React.FC = () => {
                   </div>
                   <div className="ml-5 w-0 flex-1">
                     <dl>
-                      <dt className="text-sm font-medium text-gray-500 truncate">Total de Projetos</dt>
+                      <dt className="text-sm font-medium text-gray-500 truncate">Total Projects</dt>
                       <dd className="text-lg font-medium text-gray-900">12</dd>
                     </dl>
                   </div>
@@ -62,7 +62,7 @@ const Dashboard: React.FC = () => {
                   </div>
                   <div className="ml-5 w-0 flex-1">
                     <dl>
-                      <dt className="text-sm font-medium text-gray-500 truncate">Usuários Ativos</dt>
+                      <dt className="text-sm font-medium text-gray-500 truncate">Active Users</dt>
                       <dd className="text-lg font-medium text-gray-900">156</dd>
                     </dl>
                   </div>
@@ -81,7 +81,7 @@ const Dashboard: React.FC = () => {
                   </div>
                   <div className="ml-5 w-0 flex-1">
                     <dl>
-                      <dt className="text-sm font-medium text-gray-500 truncate">Taxa de Conversão</dt>
+                      <dt className="text-sm font-medium text-gray-500 truncate">Conversion Rate</dt>
                       <dd className="text-lg font-medium text-gray-900">24.5%</dd>
                     </dl>
                   </div>
@@ -93,26 +93,26 @@ const Dashboard: React.FC = () => {
           {/* Charts Section */}
           <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-6">
             <div className="bg-white overflow-hidden shadow rounded-lg p-6">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Visão Geral</h3>
+              <h3 className="text-lg font-medium text-gray-900 mb-4">General Overview</h3>
               <div className="bg-gray-100 rounded-lg p-4 h-64 flex items-center justify-center">
-                <p className="text-gray-500 text-center">Gráfico de desempenho<br />(Implementação futura)</p>
+                <p className="text-gray-500 text-center">Chart visualization<br />(Future implementation)</p>
               </div>
             </div>
 
             <div className="bg-white overflow-hidden shadow rounded-lg p-6">
-              <h3 className="text-lg font-medium text-gray-900 mb-4">Atividades Recentes</h3>
+              <h3 className="text-lg font-medium text-gray-900 mb-4">Recent Activities</h3>
               <div className="space-y-3">
                 {[
-                  { action: 'Projeto criado', user: 'João Silva', time: '2 min ago' },
-                  { action: 'Task concluída', user: 'Maria Santos', time: '5 min ago' },
-                  { action: 'Upload realizado', user: 'Pedro Costa', time: '10 min ago' },
-                  { action: 'Relatório gerado', user: 'Ana Oliveira', time: '15 min ago' }
+                  { action: 'Project created', user: 'João Silva', time: '2 min ago' },
+                  { action: 'Task completed', user: 'Maria Santos', time: '5 min ago' },
+                  { action: 'Upload completed', user: 'Pedro Costa', time: '10 min ago' },
+                  { action: 'Report generated', user: 'Ana Oliveira', time: '15 min ago' }
                 ].map((activity, index) => (
                   <div key={index} className="flex items-center space-x-3">
                     <div className="flex-shrink-0 w-2 h-2 bg-blue-500 rounded-full"></div>
                     <div className="flex-1 min-w-0">
                       <p className="text-sm text-gray-900 truncate">
-                        {activity.action} por {activity.user}
+                        {activity.action} by {activity.user}
                       </p>
                       <p className="text-xs text-gray-500">{activity.time}</p>
                     </div>
